@@ -1,4 +1,4 @@
-# Growtopia Proxy with 70+ features https://nubizaserver.my.id
+# Growtopia Proxy with alot features https://nubizaserver.my.id
 * Need key for login proxy (price key is 3DL, check on my discord https://dsc.gg/nubiza/)
 
 # Run in Termux/Linux
