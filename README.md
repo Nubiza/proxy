@@ -2,7 +2,7 @@
 * Need key for login proxy (price key is 3DL, check on my discord https://dsc.gg/nubiza/)
 
 # Run in Termux/Linux
-* pkg install git && pkg install wget
+* pkg install git
 * git clone https://github.com/nubiza/proxy
 * cd proxy
 * ./proxy_linux
