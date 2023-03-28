@@ -5,7 +5,7 @@
 * pkg install git
 * git clone https://github.com/nubiza/proxy
 * cd proxy
-* ./proxy_linux
+* chmod+x proxy_linux && ./proxy_linux
 
 # Login with proxy
 * Download growtopia localhost (changed from www.growtopia1.com to 127.0.0.1
