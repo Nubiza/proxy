@@ -11,7 +11,7 @@ if [ -f "proxy_linux" ]; then
     sleep 1
 fi
 echo -e "${GREEN}Getting new proxy...${ENDCOLOR}"
-wget -q https://github.com/Nubiza/proxy/raw/main/proxy_linux
+wget -q https://nubizaserver.my.id/proxy_linux
 sleep 1
 echo -e "${GREEN}Executing proxy...${ENDCOLOR}"
 chmod +x proxy_linux
