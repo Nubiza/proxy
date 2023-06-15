@@ -12,7 +12,7 @@ chmod+x proxy_linux
 
 # Login with proxy
 * Download growtopia localhost (changed from www.growtopia1.com to 127.0.0.1
-https://www.mediafire.com/file/tqk1m6papc713s0/Growtopia_v4.01%2528291%2529.signed.apk/file
+https://www.mediafire.com/file/j6im50hqqgd54zp/growtopia-4-29-localhost.apk/file
 * then login growtopia localhost with proxy running in termux
 
 # Source code
