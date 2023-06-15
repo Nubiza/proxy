@@ -2,10 +2,13 @@
 * Need key for login proxy (price key is 5DL, check on my discord https://dsc.gg/nubiza/)
 
 # Run in Termux/Linux
-* pkg update && pkg upgrade && pkg install git openssl
-* git clone https://github.com/nubiza/proxy
-* cd proxy
-* chmod+x proxy_linux && ./proxy_linux
+```
+pkg update && pkg upgrade && pkg install git openssl
+git clone https://github.com/nubiza/proxy
+cd proxy
+chmod+x proxy_linux
+./proxy_linux
+```
 
 # Login with proxy
 * Download growtopia localhost (changed from www.growtopia1.com to 127.0.0.1
