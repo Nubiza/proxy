@@ -6,14 +6,14 @@
 apt update && apt upgrade && apt install git openssl libenet
 git clone https://github.com/nubiza/proxy
 cd proxy
-chmod+x proxy_linux
+chmod +x proxy_linux
 ./proxy_linux
 ```
 
 # Login with proxy
-* Download growtopia localhost (changed from www.growtopia1.com to 127.0.0.1
+* Download & install growtopia localhost (changed from www.growtopia1.com to 127.0.0.1
 https://www.mediafire.com/file/j6im50hqqgd54zp/growtopia-4-29-localhost.apk/file
 * then login growtopia localhost with proxy running in termux
 
 # Source code
-* Here > https://github.com/nubiza/nubizaproxy
+* https://github.com/nubiza/nubizaproxy
