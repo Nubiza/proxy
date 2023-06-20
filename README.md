@@ -3,7 +3,7 @@
 
 # Run in Termux/Linux for 64 bit
 ```
-pkg update && pkg upgrade && pkg install git openssl
+apt update && apt upgrade && apt install git openssl libenet
 git clone https://github.com/nubiza/proxy
 cd proxy
 chmod+x proxy_linux
