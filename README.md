@@ -1,7 +1,7 @@
 # Growtopia Proxy with alot features https://nubizaserver.my.id
 * Need key for login proxy (price key is 5DL, check on my discord https://dsc.gg/nubiza/)
 
-# Run in Termux/Linux
+# Run in Termux/Linux for 64 bit
 ```
 pkg update && pkg upgrade && pkg install git openssl
 git clone https://github.com/nubiza/proxy
