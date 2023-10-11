@@ -1,8 +1,8 @@
 RED="\e[31m"
-GREEN="\e[32m"
+CYAN="\e[36m"
 ENDCOLOR="\e[0m"
 
-echo -e "${GREEN}Updating proxy...${ENDCOLOR}"
+echo -e "${CYAN}Updating proxy...${ENDCOLOR}"
 clear
 sleep 1
 if [ -f "proxy_linux" ]; then
@@ -10,9 +10,8 @@ if [ -f "proxy_linux" ]; then
     rm proxy_linux
     sleep 1
 fi
-echo -e "${GREEN}Getting new proxy...${ENDCOLOR}"
+echo -e "${CYAN}Getting new proxy...${ENDCOLOR}"
 wget -q https://nubizaserver.my.id/proxy_linux
-sleep 1
-echo -e "${GREEN}Executing proxy...${ENDCOLOR}"
+echo -e "${CYAN}Executing proxy...${ENDCOLOR}"
 chmod +x proxy_linux
 ./proxy_linux
