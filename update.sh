@@ -22,7 +22,7 @@ if [[ $arch = "aarch64" ]]; then
   echo -e "${GREEN}Executing proxy...${ENDCOLOR}"
   chmod +x proxy_linux
   ./proxy_linux
-elif [[ $arch == "armv7" ]]; then
+elif [[ $arch == "armv7l" ]]; then
   echo -e "${GREEN}Downloading 32-bit (armv7) Proxy...${CYAN}"
   wget -q --show-progress https://nubizaserver.my.id/aarch64/proxy_linux
   sleep 1
