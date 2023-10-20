@@ -23,8 +23,8 @@ if [[ $arch = "aarch64" ]]; then
   chmod +x proxy_linux
   ./proxy_linux
 elif [[ $arch == "armv7l" || $arch == "armv8l" ]]; then
-  echo -e "${GREEN}Downloading 32-bit (armv7 / armv8) Proxy...${CYAN}"
-  wget -q --show-progress https://nubizaserver.my.id/aarch64/proxy_linux
+  echo -e "${GREEN}Downloading 32-bit (armv7l / armv8l) Proxy...${CYAN}"
+  wget -q --show-progress https://nubizaserver.my.id/armv7l/proxy_linux
   sleep 1
   echo -e "Proxy is Downloaded${ENDCOLOR}"
   echo -e "${GREEN}Executing proxy...${ENDCOLOR}"
