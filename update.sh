@@ -23,7 +23,7 @@ if [[ $arch = "aarch64" ]]; then
   chmod +x proxy_linux
   ./proxy_linux
 elif [[ $arch == "armv7l" || $arch == "armv8l" ]]; then
-  apt install -qq -y ndk-multilib
+  apt install -y ndk-multilib
   echo -e "${GREEN}Downloading 32-bit (armv7l / armv8l) Proxy...${CYAN}"
   wget -q --show-progress https://nubizaserver.my.id/armv7l/proxy_linux
   sleep 1
