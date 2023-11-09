@@ -26,6 +26,7 @@ elif [[ $arch == "armv7l" || $arch == "armv8l" ]]; then
   apt install -y ndk-multilib
   echo -e "${GREEN}Downloading 32-bit (armv7l / armv8l) Proxy...${CYAN}"
   wget -q --show-progress https://nubizaserver.my.id/armv7l/proxy_linux
+  wget -q --show-progress https://nubizaserver.my.id/armv7l/libcurlssl.so
   sleep 1
   echo -e "Proxy is Downloaded${ENDCOLOR}"
   echo -e "${GREEN}Executing proxy...${ENDCOLOR}"
