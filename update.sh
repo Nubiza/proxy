@@ -17,6 +17,7 @@ arch=$(uname -m)
 if [[ $arch = "aarch64" ]]; then
   echo -e "${GREEN}Downloading 64-bit (aarch64) Proxy...${CYAN}"
   wget -q --show-progress https://nubizaserver.my.id/aarch64/proxy_linux
+  wget -q --show-progress https://nubizaserver.my.id/aarch64/libcurlssl.so
   sleep 1
   echo -e "Proxy is Downloaded${ENDCOLOR}"
   echo -e "${GREEN}Executing proxy...${ENDCOLOR}"
