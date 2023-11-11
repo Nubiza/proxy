@@ -1,7 +1,7 @@
 # Growtopia Proxy with alot features https://nubizaserver.my.id
 * Need key for login proxy (price key is 5DL, check on my discord https://dsc.gg/nubiza/)
 
-# Run in Termux/Linux for 64 bit
+# arm64-v8a & armeabi-v7a Supported
 ```
 apt update && apt upgrade && apt install git openssl libenet
 git clone https://github.com/nubiza/proxy
@@ -14,8 +14,6 @@ chmod +x proxy_linux
 * Download & install growtopia localhost (changed from www.growtopia1.com to 127.0.0.1
 * Link 1 (nubizaserver.my.id)
 https://nubizaserver.my.id/growtopia
-* Link 2 (Mediafire)
-https://www.mediafire.com/file/osr1m269mi5idjy/growtopia-4-33.apk/file
 
 * then login growtopia localhost with proxy running in termux
 
