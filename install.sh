@@ -4,11 +4,11 @@ CYAN="\e[36m"
 ENDCOLOR="\e[0m"
 
 clear
-echo -e "${GREEN}Installing Proxy...${ENDCOLOR}"
+echo -e "${GREEN}Installing Nubiza Proxy...${ENDCOLOR}"
 sleep 1
-if [ -f "proxy_linux" ]; then
+if [ -f "nubizaproxy" ]; then
     echo -e "${RED}Deleting old proxy...${ENDCOLOR}"
-    rm proxy_linux
+    rm nubizaproxy
     sleep 1
     echo -e "${GREEN}Getting proxy...${ENDCOLOR}"
 fi
@@ -16,21 +16,19 @@ fi
 arch=$(uname -m)
 if [[ $arch = "aarch64" ]]; then
   echo -e "${GREEN}Downloading 64-bit (aarch64) Proxy...${CYAN}"
-  wget -q --show-progress https://nubizaserver.my.id/aarch64/proxy_linux
-  wget -q --show-progress https://nubizaserver.my.id/aarch64/libcurlssl.so
+  wget -q --show-progress https://nubizaserver.my.id/aarch64/nubizaproxy
   sleep 1
   echo -e "Proxy is Downloaded${ENDCOLOR}"
-  echo -e "${GREEN}Execute proxy with this command: ./proxy_linux${ENDCOLOR}"
-  chmod +x proxy_linux
+  echo -e "${GREEN}Execute proxy with this command: ./nubizaproxy${ENDCOLOR}"
+  chmod +x nubizaproxy
 elif [[ $arch == "armv7l" || $arch == "armv8l" ]]; then
   apt install -y ndk-multilib
   echo -e "${GREEN}Downloading 32-bit (armv7l / armv8l) Proxy...${CYAN}"
-  wget -q --show-progress https://nubizaserver.my.id/armv7l/proxy_linux
-  wget -q --show-progress https://nubizaserver.my.id/armv7l/libcurlssl.so
+  wget -q --show-progress https://nubizaserver.my.id/armv7l/nubizaproxy
   sleep 1
   echo -e "Proxy is Downloaded${ENDCOLOR}"
-  echo -e "${GREEN}Execute proxy with this command: ./proxy_linux${ENDCOLOR}"
-  chmod +x proxy_linux
+  echo -e "${GREEN}Execute proxy with this command: ./nubizaproxy${ENDCOLOR}"
+  chmod +x nubizaproxy
 else
   echo -e "${RED}Your phone isn't supported${ENDCOLOR}"
 fi
