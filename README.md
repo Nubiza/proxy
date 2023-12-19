@@ -1,4 +1,4 @@
-# Growtopia Proxy with alot features https://nubizaserver.my.id
+# Growtopia Proxy with alot features https://nubiza.my.id
 * Need key for login proxy (price key is 5DL, check on my discord https://dsc.gg/nubiza/)
 
 # arm64-v8a & armeabi-v7a Supported
@@ -13,7 +13,7 @@ chmod +x proxy_linux
 # Login with proxy
 * Download & install growtopia localhost (changed from www.growtopia1.com to 127.0.0.1
 * Link 1 (nubizaserver.my.id)
-https://nubizaserver.my.id/growtopia
+https://nubiza.my.id/growtopia
 
 * then login growtopia localhost with proxy running in termux
 
