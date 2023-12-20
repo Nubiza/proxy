@@ -6,8 +6,6 @@ MAGENTA="\e[35m"
 CYAN="\e[36m"
 WHITE="\e[37m"
 BOLD="\e[1m"
-UNDERLINE="\e[4m"
-REVERSE="\e[7m"
 BG_RED="\e[41m"
 BG_GREEN="\e[42m"
 BG_YELLOW="\e[43m"
@@ -34,11 +32,11 @@ if [[ $arch = "aarch64" ]]; then
   do
       wget -q --show-progress https://nubiza.my.id/proxy/aarch64/nubizaproxy
       if [ -f "nubizaproxy" ]; then
-          echo -e "Proxy Downloaded${ENDCOLOR}"
+          echo -e "${GREEN}Proxy Downloaded${ENDCOLOR}"
           chmod +x nubizaproxy
           break
       else
-          echo -e "${RED}Failed To Download Proxy, ${GREEN}Retrying...${ENDCOLOR}"
+          echo -e "${RED}Failed To Download Proxy, ${BG_YELLOW}${BOLD}Retrying...${ENDCOLOR}"
       fi
   done
   sleep 1
@@ -50,15 +48,14 @@ elif [[ $arch == "armv7l" || $arch == "armv8l" ]]; then
   do
       wget -q --show-progress https://nubiza.my.id/proxy/armv7l/nubizaproxy
       if [ -f "nubizaproxy" ]; then
-          echo -e "Proxy Downloaded${ENDCOLOR}"
+          echo -e "${GREEN}Proxy Downloaded${ENDCOLOR}"
           chmod +x nubizaproxy
           break
       else
-          echo -e "${RED}Failed To Download Proxy, ${GREEN}Retrying...${ENDCOLOR}"
+          echo -e "${RED}Failed To Download Proxy, ${BG_YELLOW}${BOLD}Retrying...${ENDCOLOR}"
       fi
   done
   sleep 1
-  echo -e "Proxy Downloaded${ENDCOLOR}"
   echo -e "${GREEN}Execute proxy with this command: ./nubizaproxy${ENDCOLOR}"
 else
   echo -e "${RED}Your device isn't supported${ENDCOLOR}"
