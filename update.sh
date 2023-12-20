@@ -36,7 +36,7 @@ if [[ $arch = "aarch64" ]]; then
           chmod +x nubizaproxy
           break
       else
-          echo -e "${RED}Failed To Download Proxy, ${BG_YELLOW}${BOLD}Retrying...${ENDCOLOR}"
+          echo -e "${RED}Failed To Download Proxy, ${BG_YELLOW}${WHITE}Retrying...${ENDCOLOR}"
       fi
   done
   sleep 1
@@ -53,7 +53,7 @@ elif [[ $arch == "armv7l" || $arch == "armv8l" ]]; then
           chmod +x nubizaproxy
           break
       else
-          echo -e "${RED}Failed To Download Proxy, ${BG_YELLOW}${BOLD}Retrying...${ENDCOLOR}"
+          echo -e "${RED}Failed To Download Proxy, ${BG_YELLOW}${WHITE}Retrying...${ENDCOLOR}"
       fi
   done
   sleep 1
