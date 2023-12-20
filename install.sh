@@ -5,7 +5,6 @@ BLUE="\e[34m"
 MAGENTA="\e[35m"
 CYAN="\e[36m"
 WHITE="\e[37m"
-BOLD="\e[1m"
 BG_RED="\e[41m"
 BG_GREEN="\e[42m"
 BG_YELLOW="\e[43m"
@@ -36,7 +35,7 @@ if [[ $arch = "aarch64" ]]; then
           chmod +x nubizaproxy
           break
       else
-          echo -e "${RED}Failed To Download Proxy, ${BG_YELLOW}${BOLD}Retrying...${ENDCOLOR}"
+          echo -e "${RED}Failed To Download Proxy, ${BG_YELLOW}${WHITE}Retrying...${ENDCOLOR}"
       fi
   done
   sleep 1
@@ -52,7 +51,7 @@ elif [[ $arch == "armv7l" || $arch == "armv8l" ]]; then
           chmod +x nubizaproxy
           break
       else
-          echo -e "${RED}Failed To Download Proxy, ${BG_YELLOW}${BOLD}Retrying...${ENDCOLOR}"
+          echo -e "${RED}Failed To Download Proxy, ${BG_YELLOW}${WHITE}Retrying...${ENDCOLOR}"
       fi
   done
   sleep 1
