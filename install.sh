@@ -34,7 +34,8 @@ if [[ $arch = "aarch64" ]]; then
           file_size=$(wc -c nubizaproxy | awk '{print $1}')  # Get the size of the file in bytes
           one_mb=1048576  # 1 megabyte in bytes
           if [ "$file_size" -lt "$one_mb" ]; then
-              echo -e "${RED}Failed To Download Proxy, ${BG_YELLOW}${WHITE}Retrying...${ENDCOLOR}"
+              rm -f nubizaproxy
+              echo -e "${RED}Invalid file size, ${BG_YELLOW}${WHITE}Retrying...${ENDCOLOR}"
           else
               echo -e "${GREEN}Proxy Downloaded${ENDCOLOR}"
               chmod +x nubizaproxy
@@ -56,7 +57,8 @@ elif [[ $arch == "armv7l" || $arch == "armv8l" ]]; then
           file_size=$(wc -c nubizaproxy | awk '{print $1}')  # Get the size of the file in bytes
           one_mb=1048576  # 1 megabyte in bytes
           if [ "$file_size" -lt "$one_mb" ]; then
-              echo -e "${RED}Failed To Download Proxy, ${BG_YELLOW}${WHITE}Retrying...${ENDCOLOR}"
+              rm -f nubizaproxy
+              echo -e "${RED}Invalid file size, ${BG_YELLOW}${WHITE}Retrying...${ENDCOLOR}"
           else
               echo -e "${GREEN}Proxy Downloaded${ENDCOLOR}"
               chmod +x nubizaproxy
