@@ -32,9 +32,15 @@ if [[ $arch = "aarch64" ]]; then
   do
       wget -q --show-progress https://nubiza.my.id/proxy/aarch64/nubizaproxy
       if [ -f "nubizaproxy" ]; then
-          echo -e "${GREEN}Proxy Downloaded${ENDCOLOR}"
-          chmod +x nubizaproxy
-          break
+          file_size=$(wc -c nubizaproxy | awk '{print $1}')  # Get the size of the file in bytes
+          one_mb=1048576  # 1 megabyte in bytes
+          if [ "$file_size" -lt "$one_mb" ]; then
+              echo -e "${RED}Failed To Download Proxy, ${BG_YELLOW}${WHITE}Retrying...${ENDCOLOR}"
+          else
+              echo -e "${GREEN}Proxy Downloaded${ENDCOLOR}"
+              chmod +x nubizaproxy
+              break
+          fi
       else
           echo -e "${RED}Failed To Download Proxy, ${BG_YELLOW}${WHITE}Retrying...${ENDCOLOR}"
       fi
@@ -49,9 +55,15 @@ elif [[ $arch == "armv7l" || $arch == "armv8l" ]]; then
   do
       wget -q --show-progress https://nubiza.my.id/proxy/armv7l/nubizaproxy
       if [ -f "nubizaproxy" ]; then
-          echo -e "${GREEN}Proxy Downloaded${ENDCOLOR}"
-          chmod +x nubizaproxy
-          break
+          file_size=$(wc -c nubizaproxy | awk '{print $1}')  # Get the size of the file in bytes
+          one_mb=1048576  # 1 megabyte in bytes
+          if [ "$file_size" -lt "$one_mb" ]; then
+              echo -e "${RED}Failed To Download Proxy, ${BG_YELLOW}${WHITE}Retrying...${ENDCOLOR}"
+          else
+              echo -e "${GREEN}Proxy Downloaded${ENDCOLOR}"
+              chmod +x nubizaproxy
+              break
+          fi
       else
           echo -e "${RED}Failed To Download Proxy, ${BG_YELLOW}${WHITE}Retrying...${ENDCOLOR}"
       fi
