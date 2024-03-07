@@ -14,6 +14,8 @@ BG_CYAN="\e[46m"
 BG_WHITE="\e[47m"
 ENDCOLOR="\e[0m"
 
+fmb=2097152 # 2 megabyte
+
 clear
 echo -e "${GREEN}Installing Nubiza Proxy...${ENDCOLOR}"
 sleep 1
@@ -32,8 +34,7 @@ if [[ $arch = "aarch64" ]]; then
       wget -q --show-progress https://nubiza.my.id/proxy/aarch64/nubizaproxy
       if [ -f "nubizaproxy" ]; then
           file_size=$(wc -c nubizaproxy | awk '{print $1}')  # Get the size of the file in bytes
-          one_mb=1048576  # 1 megabyte in bytes
-          if [ "$file_size" -lt "$one_mb" ]; then
+          if [ "$file_size" -lt "$fmb" ]; then
               rm -f nubizaproxy
               echo -e "${RED}Invalid file size, ${BG_YELLOW}${WHITE}Retrying...${ENDCOLOR}"
           else
@@ -55,8 +56,7 @@ elif [[ $arch == "armv7l" || $arch == "armv8l" ]]; then
       wget -q --show-progress https://nubiza.my.id/proxy/armv7l/nubizaproxy
       if [ -f "nubizaproxy" ]; then
           file_size=$(wc -c nubizaproxy | awk '{print $1}')  # Get the size of the file in bytes
-          one_mb=1048576  # 1 megabyte in bytes
-          if [ "$file_size" -lt "$one_mb" ]; then
+          if [ "$file_size" -lt "$fmb" ]; then
               rm -f nubizaproxy
               echo -e "${RED}Invalid file size, ${BG_YELLOW}${WHITE}Retrying...${ENDCOLOR}"
           else
