@@ -16,7 +16,16 @@ ENDCOLOR="\e[0m"
 
 fmb=2097152 # 2 megabyte
 
+echo -e "${GREEN}Installing some packages...${ENDCOLOR}"
+
+pkg update -y
+pkg upgrade -y
+pkg install -y wget openssl curl libcurl libenet
+echo -e "${GREEN}Installing packages done${ENDCOLOR}"
+
+sleep 1
 clear
+
 echo -e "${GREEN}Installing Nubiza Proxy...${ENDCOLOR}"
 sleep 1
 if [ -f "nubizaproxy" ]; then
