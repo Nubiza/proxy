@@ -18,9 +18,7 @@ fmb=2097152 # 2 megabyte
 
 echo -e "${GREEN}Installing some packages...${ENDCOLOR}"
 
-pkg update -y
-pkg upgrade -y
-pkg install -y wget openssl curl libcurl libenet
+pkg update -y && pkg upgrade -y && pkg install -y wget openssl curl libcurl libenet
 echo -e "${GREEN}Installing packages done${ENDCOLOR}"
 
 sleep 1
