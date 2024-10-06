@@ -18,7 +18,7 @@ fmb=2097152 # 2 megabyte
 
 echo -e "${GREEN}Installing some packages...${ENDCOLOR}"
 
-pkg update -y && pkg upgrade -y && pkg install -y wget openssl curl libcurl libenet
+pkg update -y && pkg upgrade -y && pkg install openssl curl libcurl libenet -y
 echo -e "${GREEN}Installing packages done${ENDCOLOR}"
 
 sleep 1
@@ -38,7 +38,7 @@ if [[ $arch = "aarch64" ]]; then
   echo -e "${GREEN}Downloading 64-bit (aarch64) Proxy...${CYAN}"
   while true
   do
-      wget -q --show-progress https://nubiza.my.id/proxy/aarch64/nubizaproxy
+      curl -L# https://nubiza.my.id/proxy/aarch64/nubizaproxy -o nubizaproxy
       if [ -f "nubizaproxy" ]; then
           file_size=$(wc -c nubizaproxy | awk '{print $1}')  # Get the size of the file in bytes
           if [ "$file_size" -lt "$fmb" ]; then
@@ -60,7 +60,7 @@ elif [[ $arch == "armv7l" || $arch == "armv8l" ]]; then
   echo -e "${GREEN}Downloading 32-bit (armv7l / armv8l) Proxy...${CYAN}"
   while true
   do
-      wget -q --show-progress https://nubiza.my.id/proxy/armv7l/nubizaproxy
+      curl -L# https://nubiza.my.id/proxy/armv7l/nubizaproxy -o nubizaproxy
       if [ -f "nubizaproxy" ]; then
           file_size=$(wc -c nubizaproxy | awk '{print $1}')  # Get the size of the file in bytes
           if [ "$file_size" -lt "$fmb" ]; then
