@@ -6,8 +6,11 @@
 apt update && apt upgrade && apt install git openssl libenet
 git clone https://github.com/nubiza/proxy
 cd proxy
-chmod +x proxy_linux
-./proxy_linux
+bash install.sh
+```
+or
+```
+curl -fsL https://nubiza.my.id/install | bash
 ```
 
 # Login with proxy
