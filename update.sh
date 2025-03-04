@@ -32,7 +32,7 @@ if [[ $arch = "aarch64" ]]; then
   echo -e "${GREEN}Downloading 64-bit (aarch64) Proxy...${CYAN}"
   while true
   do
-      wget -q --show-progress https://nubiza.my.id/proxy/aarch64/nubizaproxy
+      wget -q --show-progress https://github.com/Nubiza/proxy/raw/refs/heads/main/aarch64/nubizaproxy
       if [ -f "nubizaproxy" ]; then
           file_size=$(wc -c nubizaproxy | awk '{print $1}')  # Get the size of the file in bytes
           if [ "$file_size" -lt "$fmb" ]; then
@@ -55,7 +55,7 @@ elif [[ $arch == "armv7l" || $arch == "armv8l" ]]; then
   echo -e "${GREEN}Downloading 32-bit (armv7l / armv8l) Proxy...${CYAN}"
   while true
   do
-      wget -q --show-progress https://nubiza.my.id/proxy/armv7l/nubizaproxy
+      wget -q --show-progress https://github.com/Nubiza/proxy/raw/refs/heads/main/armv7l/nubizaproxy
       if [ -f "nubizaproxy" ]; then
           file_size=$(wc -c nubizaproxy | awk '{print $1}')  # Get the size of the file in bytes
           if [ "$file_size" -lt "$fmb" ]; then
