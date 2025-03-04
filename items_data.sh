@@ -26,4 +26,3 @@ do
       echo -e "${RED}Failed To download items.dat, ${BG_YELLOW}${WHITE}Retrying...${ENDCOLOR}"
     fi
 done
-echo -e "${GREEN}items.dat downloaded!${ENDCOLOR}"
