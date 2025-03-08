@@ -12,6 +12,7 @@ fi
 echo -e "${GREEN}Downloading items data...${ENDCOLOR}"
 while true
 do
+    sleep 2
     curl -L# https://nubiza.my.id/items.dat -o items.dat
     if [ -f "items.dat" ]; then
         file_size=$(wc -c items.dat | awk '{print $1}')  # Get the size of the file in bytes
