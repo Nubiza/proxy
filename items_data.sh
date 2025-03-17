@@ -6,7 +6,7 @@ fmb=2097152 # 2 megabyte
 sleep 1
 if [ -f "items.dat" ]; then
     echo -e "${RED}Deleting old items.dat...${ENDCOLOR}"
-    rm nubizaproxy
+    rm items.dat
 fi
 
 echo -e "${GREEN}Downloading items data...${ENDCOLOR}"
